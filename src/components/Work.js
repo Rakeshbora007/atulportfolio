@@ -7,6 +7,10 @@ import Img3 from '../assets/project3.png';
 import { useNavigate } from 'react-router-dom';
 const Work = () => {
   const navigate = useNavigate()
+  const handleroute = () => {
+    window.scrollTo(0, 0)
+    navigate("/allprojects")
+  }
   return <section className='section' id='work'>
     <div className='container mx-auto'>
       <div className='flex flex-col lg:flex-row gap-x-10'>
@@ -21,7 +25,7 @@ const Work = () => {
           <div>
             <h2 className='h2 leading-tight text-accent'>My Latest <br />Work.</h2>
             <p className='max-w-sm mb-16'>These Projects leverages modern technologies like ReactJS, Node.js, and MongoDB to deliver a responsive and intuitive platform. Users can expect fast loading times, efficient data handling, and an elegant UI that adapts to different devices.</p>
-            <button className='btn btn-sm' onClick={()=>navigate("/allprojects")}>View all project</button>
+            <button className='btn btn-sm' onClick={handleroute}>View all project</button>
           </div>
           {/* image */}
           <a href="https://www.agelessiscool.com/">
